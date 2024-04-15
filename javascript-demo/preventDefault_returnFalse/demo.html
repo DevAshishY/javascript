@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+<!-- 
+================================== 
+onClick on html
+==================================
+ -->
+
+ <a href="abc.html" id="btn" onclick="fun(event)">PreventDefault</a><br>
+ <script>
+   function fun(e) {
+     e.preventDefault();
+     console.log(e);
+   }
+ </script>
+
+
+<!-- 
+================================== 
+Direct taget by addeventLisner
+==================================
+ -->
+<a href="abc.html" id="btn2">addeventLisner</a> <br>
+    <script>
+      document.getElementById("btn2").addEventListener("click", function (e) {
+        e.preventDefault();
+     console.log(e);
+      });
+</script>
+
+
+<!-- 
+================================== 
+return false inside function
+==================================
+ -->
+ <a href="abc.html" id="btn3" onclick="return false;">return false</a><br>
+
+<!-- 
+================================== 
+javascript void(0) : in html inside href 
+==================================
+ -->
+
+
+ <a href="javascript:void(0)" id="btn4" onclick="fun4()">javascript:void(0)</a>
+
+ <script>
+    function fun4(){
+        console.log('24');
+    }
+ </script>
+  </body>
+</html>

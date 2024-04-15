@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+================================== 
+one-line arrow normal
+==================================
+ -->
+
+    <script>
+      const arrow2 = (a, b) =>   a + b;
+      let result2 = arrow2(1, 2);
+      console.log(result2);
+    </script>
+
+
+
+  <!-- 
+================================== 
+Arrow normal
+==================================
+ -->
+
+ <script>
+    const arrow1 = (a, b) => {
+      return a + b;
+    };
+    let result1 = arrow1(1, 2);
+    console.log(result1);
+  </script>
+
+
+<!-- 
+================================== 
+iFFe normal
+==================================
+ -->
+
+ <script>
+  let result3=   ((a, b) => {
+      return a + b;
+    })(2,3);
+   
+    console.log(result3);
+  </script>
+
+  <!-- 
+================================== 
+Function this
+==================================
+ -->
+
+ <script>
+let obj = {
+  name :'ashish',
+  address:{
+  city:'kanpur'
+  }
+}
+
+function normal(){
+
+  console.log(this);
+}
+
+const arrow = () =>{
+  console.log(this);
+}
+
+normal.call(obj.address)
+arrow.call(obj.address)
+
+
+  </script>
+  </body>
+</html>
+

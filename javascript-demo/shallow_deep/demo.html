@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+================================== 
+Shallow copy by spread opertor in Object
+==================================
+ -->
+
+    <script>
+      let obj1 = {
+        obj1Name: "ashish",
+        Obj1age: 30,
+        obj1address: {
+          obj1city: "kanpur",
+        },
+      };
+      let obj1Shallow = { ...obj1 };
+      obj1Shallow.obj1address.obj1city = "delhi";
+      console.log("obj1", obj1Shallow);
+      console.log("obj1", obj1);
+      // Note: we have created shallow copy but it is not woking on nexxted lable
+    </script>
+
+    <!-- 
+================================== 
+Shallow copy by object.assign in Object
+==================================
+ -->
+
+    <script>
+      let obj2 = {
+        obj2Name: "ashish",
+        obj2Age: 30,
+        obj2Address: {
+          obj2city: "kanpur",
+        },
+      };
+
+      let obj2Shallow = Object.assign({}, obj2);
+
+      obj2Shallow.obj2Address.obj2city = "delhi";
+      console.log("obj2", obj2Shallow);
+      console.log("obj2", obj2);
+    </script>
+
+    <!-- 
+================================== 
+deep copy by  Object
+==================================
+ -->
+    <script>
+      let obj3 = {
+        obj3Name: "ashish",
+        Obj3age: 30,
+        obj3Address: {
+          obj3city: "kanpur",
+        },
+      };
+
+      let obj3Deep = JSON.parse(JSON.stringify(obj3));
+      console.log( obj3Deep.obj3Address.obj3city);
+      obj3Deep.obj3Address.obj3city= "delhi";
+
+      console.log("obj3", obj3Deep) ;
+      console.log("obj3", obj3);
+      
+    </script>
+
+
+
+
+    <!-- 
+================================== 
+Shallow copy by spread opertor in Array
+==================================
+ -->
+
+ <script>
+  let arr1 = ['one','two',['three','four']]
+  let arr1Shallow = [...arr1]
+  arr1Shallow[1] = 'hundered'
+  console.log('shallowArr',arr1Shallow);
+  console.log('shallowArr',arr1);
+</script>
+
+
+    <!-- 
+================================== 
+Deep  in  Array
+==================================
+ -->
+
+ <script>
+  let arr2 = ['one','two',['three','four']]
+  let arr2Shallow = JSON.parse(JSON.stringify(arr1))
+  arr2Shallow[2][0] = 'hundered'
+  console.log('shallowArr',arr2Shallow);
+  console.log('shallowArrOriginal',arr2);
+</script>
+
+
+<!-- 
+================================== 
+deep copy by  Array
+==================================
+-->
+
+  </body>
+</html>
