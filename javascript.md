@@ -516,8 +516,19 @@ because of issue in block scope and functional scope
 
 **# 64 "use strict"**
 
- // treat all JS code as newer version
+  treat all JS code as newer version
 
+**# Data type**
+// number => 2 to power 53
+// bigint
+// string => ""
+// boolean => true/false
+// null => standalone value
+// undefined => 
+// symbol => unique
+
+
+// object
 
 
 ## Examples
