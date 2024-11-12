@@ -507,6 +507,19 @@ Web Components are a set of web platform APIs that allow you to create reusable 
 ------------------------------------------
 
 
+**# T63 do't use var**
+
+    Prefer not to use var
+because of issue in block scope and functional scope
+
+------------------------------------------
+
+**# 64 "use strict"**
+
+ // treat all JS code as newer version
+
+
+
 ## Examples
 
 
