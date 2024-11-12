@@ -519,6 +519,7 @@ because of issue in block scope and functional scope
   treat all JS code as newer version
 
 **# Data type**
+
 // number => 2 to power 53
 // bigint
 // string => ""
